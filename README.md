@@ -14,9 +14,14 @@ Why a server? The game loads ES modules and assets via `fetch`, which browsers b
 Open a terminal and run:
 
 ```bash
-cd "/Users/krishna/Documents/Code/Hunting game"
+cd path/to/Hunting game
+```
+Then
+
+```bash
 python3 -m http.server 8000
 ```
+Replace `path/to/Hunting\ game` with wherever you downloaded this folder (e.g. `~/Downloads/Hunting\ game` or `C:\Users\you\Downloads\Hunting game` on Windows).
 
 Then open [http://localhost:8000](http://localhost:8000) in your browser and click **START**.
 
