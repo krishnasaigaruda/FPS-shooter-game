@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>City Hunt — FPS</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="./style.css" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="hud">
+    <div id="top">
+      <div class="card"><span class="label">ROUND</span><span id="round">1</span></div>
+      <div class="card"><span class="label">SCORE</span><span id="score">0</span></div>
+      <div class="card"><span class="label">KILLS</span><span id="kills">0/0</span></div>
+    </div>
+    <div id="bottom">
+      <div class="card"><span class="label">HP</span>
+        <div class="bar"><div id="hpfill"></div></div>
+        <span id="hp">100</span>
+      </div>
+      <div class="card"><span class="label">AMMO</span>
+        <span id="ammo">30 / 90</span>
+      </div>
+    </div>
+    <div id="crosshair"></div>
+    <div id="hitmark"></div>
+    <div id="dmgvignette"></div>
+    <canvas id="minimap" width="220" height="220"></canvas>
+  </div>
+
+  <div id="overlay">
+    <div id="title">CITY HUNT</div>
+    <div id="subtitle">Survive the waves. Click to start.</div>
+    <button id="startBtn">START</button>
+    <div id="controls">
+      WASD move &nbsp;•&nbsp; SHIFT sprint &nbsp;•&nbsp; SPACE jump &nbsp;•&nbsp; LMB shoot &nbsp;•&nbsp; R reload &nbsp;•&nbsp; ESC pause
+    </div>
+  </div>
+
+  <div id="upgrade" class="hidden">
+    <h2>ROUND CLEARED</h2>
+    <p>Choose an upgrade</p>
+    <div id="upgradeList"></div>
+  </div>
+
+  <div id="endscreen" class="hidden">
+    <h2 id="endTitle">YOU DIED</h2>
+    <p id="endStats"></p>
+    <button id="restartBtn">PLAY AGAIN</button>
+  </div>
+
+  <div id="loader"><div>Loading assets…</div><div id="loadbar"><div id="loadfill"></div></div></div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
